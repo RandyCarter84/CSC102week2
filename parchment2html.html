@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Head tag contains info for the page not typically seen by the end user-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventor's Journey</title>
+    <!--Everyting above this line are metatags for compatability -->
+
+    <!--The following two lines link the external CSS and JS files-->
+    <link rel="stylesheet" type="text/css" href="parchmentStyle.css">
+    <script src = "code.js"></script>
+</head>
+
+<!--body tag contais info we want displayed for the end user-->
+<body>
+
+    <!--self explanitory-->
+   <script>
+        alert("Are you ready?");
+    </script>
+   
+    <!-- the main tag is used to define the main content of a web page. It is a semantic tag that helps search engines and screen readers to understand the structure of a web page -->
+    <main>
+       
+        <!--div container for parchment paper-->
+        <div id="parchment"></div>
+        
+         <!--this container is my countdown button/ clippath function left sqare bg over parchment image when using the button tag-->
+         <a onclick="countDown()" class="button1"><span>Engage</span></a>
+         <div id = "countdownTimer" class="countDownTimer"></div>
+
+        <!--containter for parchment contents/ have to be contained inside the parchment container or content will render under that layer and not be visible-->
+        <div id="contain">
+
+            <!--Title is contained in paragraph tag with class association to inherit custom font from google api-->
+              <p class="inkTitle">Inventor's Journey</p>
+
+          <p>Inventing is an art and a science that has shaped the course of human history. From the wheel to the internet, inventors have created the tools and technologies that make our lives easier, more efficient, and more enjoyable.
+
+            At this website, we explore the process of inventing, from the spark of an idea to the creation of a prototype, and everything in between. We delve into the minds of inventors, their struggles and triumphs, and their impact on society.
+            
+            Whether you're an aspiring inventor or simply curious about the world of invention, we invite you to join us on this exciting journey. Let's explore the art and science of inventing together!</p>
+
+         </div>
+
+          <!--These are the three boxes the intent is for them to be hyperlinked to additional pages of content later/ its set up as a container holding three image containers for alignment purposes-->
+        <div id="image-container">
+            <div class="image">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/71AcWvZC1OL._SY800_.jpg" alt="Lightbulb">
+                <div class="overlay">
+                    <h3>Bringing Ideas to Life</h3>
+                </div>
+            </div>
+            <div class="image">
+                <img src="https://i.redd.it/uan2ocj2mr791.png" alt="Sketchbook">
+                <div class="overlay">
+                    <h3>Creative Process</h3>
+                </div>
+            </div>
+            <div class="image">
+                <img src="https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/UUID-cl9cgun041048ucombgkjv7wc/public" alt="robotics">
+                <div class="overlay">
+                    <h3>The Power of Technology</h3>
+                </div>
+        </div>
+    
+             
+
+     </main>
+
+     
+        
+    
+      
+       
+   
+        <!--jumping ahead here I used Scalable Vector Grafics to create the torn edge effect on the parchment layer-->
+     <svg>
+        <filter id="wavy2">
+          <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1" />
+          <feDisplacementMap in="SourceGraphic" scale="20" />
+        </filter>
+      </svg>
+
+     
+</body>
+</html>
